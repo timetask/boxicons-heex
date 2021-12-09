@@ -1,6 +1,6 @@
-defmodule Boxicon.Source do
+defmodule Box.Source do
   @moduledoc """
-  Utility module to help populate `Boxicon`.
+  Utility module to help populate `Box`.
   """
 
   @version "2.0.9"
@@ -9,7 +9,7 @@ defmodule Boxicon.Source do
 
   @spec get_icons() :: [%__MODULE__{}]
   def get_icons() do
-    config = Application.get_env(:surface_boxicon, :icons, :all)
+    config = Application.get_env(:boxicons_heex, :icons, :all)
     get_icons(config)
   end
 
