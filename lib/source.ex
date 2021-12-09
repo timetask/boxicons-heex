@@ -64,7 +64,7 @@ defmodule Box.Source do
 
   defp populate_source(%__MODULE__{} = source) do
     file_content = File.read!(source.file_path)
-    [_, content] = Regex.run(~r"<svg[^>]*>(.+?)</svg>", file_content)
+    [_, content] = Regex.run(~r/<svg[^>]*>(.+?)<\/svg>/ms, file_content)
     %__MODULE__{source | content: content}
   end
 
