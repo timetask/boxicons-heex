@@ -6,23 +6,20 @@ defmodule BoxiconTest do
   # The default endpoint for testing
   @endpoint Endpoint
 
-
   describe "Box.icons/1" do
     test "Simple case" do
       assigns = %{}
 
       html =
-        rendered_to_string(
-          ~H"""
-            <Box.icons
-              type="regular"
-              name="calendar"
-              size="24"
-              class="icon"
-            />
+        rendered_to_string(~H"""
+          <Box.icons
+            type="regular"
+            name="calendar"
+            size="24"
+            class="icon"
+          />
 
-          """
-        )
+        """)
 
       assert String.contains?(html, "M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0")
       assert String.contains?(html, "class=\"")
@@ -37,14 +34,12 @@ defmodule BoxiconTest do
     assigns = %{}
 
     html =
-      rendered_to_string(
-        ~H"""
-          <Box.icons
-            name="calendar"
-          />
+      rendered_to_string(~H"""
+        <Box.icons
+          name="calendar"
+        />
 
-        """
-      )
+      """)
 
     assert String.contains?(html, "M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0")
     assert String.contains?(html, "class=\"")
