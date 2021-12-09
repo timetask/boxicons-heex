@@ -1,16 +1,15 @@
 defmodule Box do
   @moduledoc """
-    Boxicon is surface component library that wraps the amazing boxicons library.
+    Boxicon Heex is a Phoenix component library that wraps the amazing boxicons library.
 
     Usage:
 
         defmodule MyComponent do
-          use Surface.Component
 
           @impl true
           def render(assigns) do
-            ~F"\""
-              <Boxicon
+            ~H"\""
+              <Box.icons
                 name="calendar"
                 type="regular"
                 size="64"
@@ -48,24 +47,12 @@ defmodule Box do
 
   defp render_content(_, _), do: "<404>"
 
-  def get_size(size) do
-    case size do
-      nil -> Application.get_env(:boxicons_heex, :default_size, 24)
-      _ -> size
-    end
-  end
+  def get_size(nil), do: Application.get_env(:boxicons_heex, :default_size, 24)
+  def get_size(size), do: size
 
-  def get_class(class) do
-    case class do
-      nil -> Application.get_env(:boxicons_heex, :default_class, "icon")
-      _ -> class
-    end
-  end
+  def get_class(nil), do: Application.get_env(:boxicons_heex, :default_class, "icon")
+  def get_class(class), do: class
 
-  def get_type(type) do
-    case type do
-      nil -> Application.get_env(:boxicons_heex, :default_type, "regular")
-      _ -> type
-    end
-  end
+  def get_type(nil), do: Application.get_env(:boxicons_heex, :default_type, "regular")
+  def get_type(type), do: type
 end

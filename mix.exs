@@ -4,7 +4,7 @@ defmodule Boxicon.MixProject do
   def project do
     [
       app: :boxicons_heex,
-      version: "0.5.3",
+      version: "1.0.0",
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -24,7 +24,7 @@ defmodule Boxicon.MixProject do
 
   defp description do
     """
-    Boxicon is surface component library that wraps the amazing boxicons library.
+    Boxicon Heex is a Phoenix component library that wraps the amazing boxicons library.
     """
   end
 
@@ -34,8 +34,8 @@ defmodule Boxicon.MixProject do
       maintainers: ["Francisco Ceruti"],
       licenses: ["Apache 2.0"],
       links: %{
-        "GitHub" => "https://github.com/fceruti/surface-boxicons",
-        "Docs" => "https://hexdocs.pm/surface-boxicons/"
+        "GitHub" => "https://github.com/timetask/boxicons-heex",
+        "Docs" => "https://hexdocs.pm/boxicons_heex/"
       }
     ]
   end
