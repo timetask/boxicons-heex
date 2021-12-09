@@ -3,8 +3,8 @@ defmodule Boxicon.MixProject do
 
   def project do
     [
-      app: :surface_boxicon,
-      version: "0.5.2",
+      app: :boxicons_heex,
+      version: "0.5.3",
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -12,8 +12,8 @@ defmodule Boxicon.MixProject do
       deps: deps(),
 
       # Docs
-      name: "Surface Boxicons",
-      source_url: "https://github.com/fceruti/surface-boxicons",
+      name: "Boxicons Heex",
+      source_url: "https://github.com/fceruti/boxicons-heex",
       docs: [
         # The main page in the docs
         main: "Boxicon",
@@ -50,7 +50,7 @@ defmodule Boxicon.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:surface, "~> 0.5.1"},
+      {:phoenix_live_view, "~> 0.17.0"},
       {:ex_doc, "~> 0.24", only: :dev, runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
     ]
