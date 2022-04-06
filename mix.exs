@@ -4,7 +4,7 @@ defmodule Boxicon.MixProject do
   def project do
     [
       app: :boxicons_heex,
-      version: "1.0.0",
+      version: "2.1.2",
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       description: description(),
