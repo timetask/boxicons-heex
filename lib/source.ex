@@ -3,7 +3,7 @@ defmodule Box.Source do
   Utility module to help populate `Box`.
   """
 
-  @version "2.1.2"
+  @version "2.1.4"
 
   defstruct [:type, :name, :content, :file_path]
 
